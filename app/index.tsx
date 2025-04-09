@@ -1,14 +1,20 @@
-import { Image, StyleSheet, Platform,Text,TouchableOpacity,View } from "react-native";
+import { Image, StyleSheet, Platform,Text,TouchableOpacity,View,Dimensions,} from "react-native";
+const  { width, height } = Dimensions.get('window');
 
 export default function HomeScreen() {
   return (
+
     <View style ={styles.container} >
+    <Text style ={styles.title}>URINE DETECTED</Text>
     <Image source={require('../assets/images/logoforhome.png')}
     style={styles.logo}
     />
-    <Text style ={styles.title}> ברוכים הבאים ל-{'\n'} URINE DETECTED</Text>
-    <Text style ={styles.description}> האפליקציה שלנו נועדה לסייע לך להתמודד עם בריחת שתן ולחיות באיכות חיים גבוהה-בקלות, בנוחות ובדיסקרטיות
-    </Text> 
+    <View style ={styles.descriptionContainer}>
+    <Text style ={styles.description}> "Our app is designed to help you manage incontinence and live a
+         high-quality life easily, comfortably, and discreetly."
+    </Text>    
+    </View>
+    
     <TouchableOpacity style ={styles.loginButton}>
     <Text style ={styles.buttonText}> login </Text>
     </TouchableOpacity>
@@ -22,11 +28,11 @@ const styles = StyleSheet.create({
   container:{
     flex:1,
     alignItems: 'center',
-    paddingTop:50,
+    paddingTop: Platform.OS =='ios' ? height * 0.08 : height * 0.05,
     backgroundColor:  '#f0f8ff',
   },
   logo: {
-    width: '100%',
+    width: '90%',
     height: 200,
     resizeMode: 'cover',
     borderBottomLeftRadius: 30,  
@@ -34,7 +40,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,            
   },
   title:{
-    fontSize:28,
+    fontSize:width * 0.07,
     fontWeight: 'bold',
     marginTop: 30,
     marginBottom:15,
@@ -42,13 +48,17 @@ const styles = StyleSheet.create({
     textAlign:'center',
     letterSpacing:1,
   },
-  description: {
+  descriptionContainer: {
+    width: '100%',
+    paddingHorizontal: 30,
+    alignItems: 'flex-start'
+},
+description: {
     fontSize: 16,
-    lineHeight: 24,       // מרווח בין שורות
+    lineHeight: 24,
     marginBottom: 20,
     color: '#4a4a4a',
-    textAlign: 'center',
-    paddingHorizontal: 30,
+    textAlign: 'left',
   },
   loginButton: {
     backgroundColor: '#007bff',

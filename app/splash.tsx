@@ -10,7 +10,8 @@ export default function SplashScreen() {
   useEffect(() => {
     // Navigate to main app after 2 seconds
     const timer = setTimeout(() => {
-      router.replace('/(tabs)');
+      router.replace('/');
+      router.push('/login');
     }, 2000);
 
     return () => clearTimeout(timer);
