@@ -3,13 +3,15 @@ import { Image, StyleSheet, Platform,Text,TouchableOpacity,View } from "react-na
 export default function HomeScreen() {
   return (
     <View style ={styles.container} >
-    <Image source={require('@/assets/images/logoforhome.png')}
+    <Image source={require('../assets/images/logoforhome.png')}
     style={styles.logo}
     />
     <Text style ={styles.title}> ברוכים הבאים ל-{'\n'} URINE DETECTED</Text>
     <Text style ={styles.description}> האפליקציה שלנו נועדה לסייע לך להתמודד עם בריחת שתן ולחיות באיכות חיים גבוהה-בקלות, בנוחות ובדיסקרטיות
-    </Text>
-    <TouchableOpacity style ={styles.loginButton}> <Text style ={styles.buttonText}> login </Text></TouchableOpacity>
+    </Text> 
+    <TouchableOpacity style ={styles.loginButton}>
+    <Text style ={styles.buttonText}> login </Text>
+    </TouchableOpacity>
 
 
     </View>
