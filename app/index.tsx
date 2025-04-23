@@ -1,7 +1,11 @@
 import { Image, StyleSheet, Platform,Text,TouchableOpacity,View,Dimensions,} from "react-native";
 const  { width, height } = Dimensions.get('window');
+import { useRouter } from 'expo-router';
+import React from 'react';
 
 export default function HomeScreen() {
+  const router = useRouter();
+
   return (
 
     <View style ={styles.container} >
@@ -15,8 +19,8 @@ export default function HomeScreen() {
     </Text>    
     </View>
     
-    <TouchableOpacity style ={styles.loginButton}>
-    <Text style ={styles.buttonText}> login </Text>
+    <TouchableOpacity style ={styles.loginButton} onPress={() => router.push('/login')}>
+    <Text style ={styles.buttonText}> Get Started</Text>
     </TouchableOpacity>
 
 
@@ -29,7 +33,7 @@ const styles = StyleSheet.create({
     flex:1,
     alignItems: 'center',
     paddingTop: Platform.OS =='ios' ? height * 0.08 : height * 0.05,
-    backgroundColor:  '#f0f8ff',
+    backgroundColor:  'white',
   },
   logo: {
     width: '90%',

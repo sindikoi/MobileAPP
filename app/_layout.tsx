@@ -5,6 +5,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
+import React from 'react';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 
@@ -31,8 +32,8 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="splash" options={{ headerShown: false }} />
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="login" options={{ title: 'login '}} />
+        <Stack.Screen name="index" options={{ headerShown: false, title: 'WelcomeScreen' }} />
+        <Stack.Screen name="login" options={{ title: 'LoginScreen '}} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

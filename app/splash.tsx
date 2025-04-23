@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { router } from 'expo-router';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import React from 'react';
 
 export default function SplashScreen() {
   const colorScheme = useColorScheme();
