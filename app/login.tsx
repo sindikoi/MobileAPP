@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { useState } from 'react';
+import { ScrollView } from 'react-native';
 
 export default function LoginScreen() {
     const [ inputValueName, setInputValueName] = useState('');
@@ -9,7 +10,7 @@ export default function LoginScreen() {
     const [ showUserName ,setUserName] = useState(false);
     
     return (
-        <View style = {styles.container} >
+        <ScrollView contentContainerStyle = {styles.container} >
             <Text style = {styles.title} > Sign In</Text>
             <View style = {styles.testContainer}>
             <Text style = {styles.infoText} > Please Enter Your username and password in the fields below
@@ -47,7 +48,7 @@ export default function LoginScreen() {
             <Text style ={styles.forgetPassword}> Forget password? click here</Text>
             </TouchableOpacity>
            
-        </View>
+        </ScrollView>
     )
     
 }

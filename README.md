@@ -1,50 +1,62 @@
-# Welcome to your Expo app 👋
+# React Native Mobile Application
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Overview
 
-## Get started
+This project is a React Native mobile app built with Expo.  
+It demonstrates basic navigation and authentication UI, including a Welcome screen and a Login screen, following best practices for structure and responsiveness.
 
-1. Install dependencies
+## Features
 
+- **Welcome Screen:**  
+  - App logo, title, and description  
+  - “Get Started” button navigates to Login
+
+- **Login Screen:**  
+  - Username/email input (with show/hide option)  
+  - Password input (with show/hide option)  
+  - “Forgot password?” link  
+  - Responsive layout for mobile and web
+
+- **Navigation:**  
+  - Stack navigation using Expo Router  
+  - Back navigation from Login to Welcome
+
+## Setup & Run Instructions
+
+1. **Install dependencies:**
    ```bash
    npm install
    ```
 
-2. Start the app
-
+2. **Start the app:**
    ```bash
-    npx expo start
+   npx expo start
    ```
+   - Press `w` to open in web browser, or scan the QR code with Expo Go on your phone.
 
-In the output, you'll find options to open the app in a
+## Folder Structure
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+/app
+  /index.tsx         # Welcome screen
+  /login.tsx         # Login screen
+  /splash.tsx        # Splash screen
+/components          # Reusable components
+/assets              # Images and fonts
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- **Expo Router** is used for file-based navigation.
+- **Styles** are managed with StyleSheet objects in each screen file.
 
-## Learn more
+## Design Decisions
 
-To learn more about developing your project with Expo, look at the following resources:
+- **Expo** was chosen for easy cross-platform development and fast prototyping.
+- **Expo Router** (React Navigation) provides a scalable navigation structure.
+- **Responsive design** is achieved using flex layouts and percentage-based sizing.
+- **Show/Hide** functionality for inputs improves user experience and privacy.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Future Improvements
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Add real authentication logic
+- Form validation and error handling
+- Keyboard handling for better UX
