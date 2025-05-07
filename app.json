@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "URINE DETECTED",
+    "name": "TIKI100",
     "slug": "mobileapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/applogo.png",
+    "icon": "./assets/images/tiki100.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,7 +13,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/applogo.png",
+        "foregroundImage": "./assets/images/tiki100.png",
         "backgroundColor": "#ffffff"
       }
     },
@@ -23,7 +23,7 @@
       "favicon": "./assets/images/favicon.png"
     },
     "splash": {
-      "image": "./assets/images/splash-newscreen.png",
+      "image": "./assets/images/tiki100.png",
       "resizeMode": "cover",
       "backgroundColor": "#ffccff"
     },

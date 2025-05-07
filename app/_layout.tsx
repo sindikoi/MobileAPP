@@ -32,8 +32,8 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="splash" options={{ headerShown: false }} />
-        <Stack.Screen name="index" options={{ headerShown: false, title: 'WelcomeScreen' }} />
-        <Stack.Screen name="login" options={{ title: 'LoginScreen '}} />
+        <Stack.Screen name="index" options={{ title: 'Tiki100' }} />
+        <Stack.Screen name="login" options={{ title: 'Tiki100 '}} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

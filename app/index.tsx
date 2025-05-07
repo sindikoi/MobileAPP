@@ -9,14 +9,15 @@ export default function HomeScreen() {
   return (
 
     <View style ={styles.container} >
-    <Text style ={styles.title}>URINE DETECTED</Text>
-    <Image source={require('../assets/images/logoforhome.png')}
+    <Image source={require('../assets/images/tiki100.png')}
     style={styles.logo}
     />
     <View style ={styles.descriptionContainer}>
-    <Text style ={styles.description}> "Our app is designed to help you manage incontinence and live a
-         high-quality life easily, comfortably, and discreetly."
-    </Text>    
+    <Text style = {styles.welcomeText}> Welcome to our app, we are here for you! </Text>  
+    <Text style ={styles.description}> 
+        Our app is designed to help you manage incontinence and live a
+         high-quality life easily, comfortably, and discreetly.
+             </Text>    
     </View>
     
     <TouchableOpacity style ={styles.loginButton} onPress={() => router.push('/login')}>
@@ -37,16 +38,15 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: '90%',
-    height: 200,
+    height: 100,
     resizeMode: 'cover',
     borderBottomLeftRadius: 30,  
     borderBottomRightRadius: 30,  
-    marginBottom: 20,            
   },
   title:{
     fontSize:width * 0.07,
     fontWeight: 'bold',
-    marginTop: 30,
+    marginTop: 10,
     marginBottom:15,
     color:'#1a1a1a',
     textAlign:'center',
@@ -55,14 +55,17 @@ const styles = StyleSheet.create({
   descriptionContainer: {
     width: '100%',
     paddingHorizontal: 30,
-    alignItems: 'flex-start'
+    paddingTop:20,
+    alignItems: 'flex-start',
+  
 },
 description: {
     fontSize: 16,
     lineHeight: 24,
-    marginBottom: 20,
+    marginBottom: 50,
     color: '#4a4a4a',
     textAlign: 'left',
+    marginTop: 5,
   },
   loginButton: {
     backgroundColor: '#007bff',
@@ -86,4 +89,8 @@ description: {
     fontWeight: 'bold',
     letterSpacing: 1,
   },
+  welcomeText:{
+    fontSize:16,
+    color:'#4a4a4a',
+  }
  });
